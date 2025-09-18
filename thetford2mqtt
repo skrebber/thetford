@@ -1,0 +1,36 @@
+
+# Usage:
+#  thetford [-h] [-i [I]] [-m [M]] [-p [P]] [-v [V]] [-c [C]] [-l] [-T [T]] [-t [T]] [-M [M]]
+#
+#   options:
+#     -h, --help  show this help message and exit
+#     -i [I]      interval [seconds] (default 5)
+#     -m [M]      MQTT host
+#     -p [P]      MQTT port
+#     -u          MQTT user
+#     -P          MQTT password
+#     -v [V]      Verbosity Level (0-3) (default 0)
+#     -c [C]      Sample Count
+#     -l          Log to Syslog (default console)
+#     -T [T]      MQTT topic
+#     -M [M]      Fridge model
+#
+
+# THETFORD_MODEL - Fridge Model
+#  N4*** or T2***
+
+THETFORD_MQTT="-m WWW.XXX.YYY.ZZZ" //IP of mqtt server
+THETFORD_OPTS="-l"
+THETFORD_LOG_LEVEL="-v 0"
+THETFORD_MQTT_USER="-u USERNAME" //USERNAME to change to your MQTT server username 
+THETFORD_MQTT_PASS="-P PASSWORD" //PASSWORD to change to your MQTT server password
+
+# - N4000 -
+
+THETFORD_TOPIC="-T thetford/N4000"
+THETFORD_MODEL="-M N4000"
+
+# - T2000 -
+# THETFORD_TOPIC="-T thetford/T2000"
+# THETFORD_MODEL="-M T2000"
+
